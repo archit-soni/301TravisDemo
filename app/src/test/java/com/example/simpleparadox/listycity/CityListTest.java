@@ -49,6 +49,11 @@ class CityListTest {
     }
 
     @Test
+    void failTest(){
+        assertTrue(false);
+    }
+
+    @Test
     void testGetCities() {
         CityList cityList = mockCityList();
 
