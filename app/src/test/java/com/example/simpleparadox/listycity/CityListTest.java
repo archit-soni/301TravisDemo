@@ -50,7 +50,11 @@ class CityListTest {
 
     @Test
     void failTest(){
-        assertTrue(true);
+        City city = new City("New city", "New province");
+        CityList cityList = mockCityList();
+        cityList.resetCityAtZero();
+        assertEquals(city.getCityName(), cityList.getCities().get(0).getCityName());
+        assertEquals(city.getProvinceName(), cityList.getCities().get(0).getProvinceName());
     }
 
     @Test
